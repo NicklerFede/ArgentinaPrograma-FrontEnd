@@ -1,0 +1,13 @@
+ng new NombreDelProyecto
+ng generate component Carpeta/NombreDelComponenteng
+ng generate service NombreDelServicio
+
+
+
+ng serve -o // abrir el proyecto en un navegador
+
+
+npm install // para cargar las dependencias de un proyecto clonado
+npm i axios // para consultar datos ajenos
+
+cd nombreCarpeta...// para entrar a una carpeta
