@@ -1,0 +1,102 @@
+<!--BARRA NAVEGACION-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-20 fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#home">Argentina Programa - #YoProgramo</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarColor02"
+      aria-controls="navbarColor02"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Acerca de mi</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experiencia</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#education">Educacion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Proyectos</a>
+        </li>
+      </ul>
+
+      <div class="redes face">
+        <a
+          href="https://github.com/NicklerFede?tab=repositories"
+          target="_blank"
+          ><i class="bi bi-github color-redes"></i
+        ></a>
+      </div>
+
+      <div class="redes insta">
+        <a href="https://www.instagram.com/fedenickler/" target="_blank"
+          ><i class="bi bi-instagram color-redes"></i
+        ></a>
+      </div>
+
+      <div class="redes lk">
+        <a
+          href="https://www.linkedin.com/in/federico-nickler-4522b31b7/"
+          target="_blank"
+          ><i class="bi bi-linkedin color-redes"></i
+        ></a>
+      </div>
+    </div>
+
+    <!-- Login -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+      <div>
+        <div class="dropdown">
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-bs-toggle="dropdown"
+          >
+            Iniciar Sesion
+          </button>
+          <ul class="dropdown-menu">
+            <div class="ingreso">
+              <span id="hideText">
+                <p class="text-ingreso">Usuario</p>
+                <input
+                  type="email"
+                  class="form-control usuario"
+                  id="user"
+                  placeholder="name@example.com"
+                  formControlName="usuario"
+                />
+                <p class="text-ingreso">Contraseña</p>
+                <input
+                  type="password"
+                  class="form-control usuario"
+                  id="pass"
+                  placeholder="Password"
+                  formControlName="password"
+                />
+              </span>
+              <div class="boton">
+                <button type="submit" class="btn clr-btn">Ingresar</button>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
