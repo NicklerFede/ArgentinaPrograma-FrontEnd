@@ -11,6 +11,13 @@ export class ApiService {
   url: string = 'http://localhost:4200/usuario';
 
   constructor(private http: HttpClient) {}
+  
+  Url = 'http://localhost:8080/Porfolio/usuario';
+
+  getUsuario(){ 
+    return this.http.get<LoginI>(this.Url)
+  }
+  
 
   loginByEmail(form: LoginI): Observable<ResponseI> {
     let direccion = this.url + "auth";

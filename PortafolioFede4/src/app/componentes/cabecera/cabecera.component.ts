@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import {ApiService} from '../../servicios/api/api.service';
-import {LoginI} from '../../modelos/login.interface';
+import { ApiService } from '../../servicios/api/api.service';
+import { LoginI } from '../../modelos/login.interface';
+
 
 @Component({
   selector: 'app-cabecera',
@@ -10,16 +11,18 @@ import {LoginI} from '../../modelos/login.interface';
   styleUrls: ['./cabecera.component.css'],
 })
 export class CabeceraComponent implements OnInit {
-  loginForm = new FormGroup({
+    loginForm = new FormGroup({
     usuario: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
+
   });
 
-  constructor(private api:ApiService) {}
+  constructor(private api: ApiService
+    ) {}
 
   ngOnInit(): void {}
 
-  onLogin(form:LoginI) {
+  onLogin(form: LoginI) {
     console.log(form);
   }
 }
