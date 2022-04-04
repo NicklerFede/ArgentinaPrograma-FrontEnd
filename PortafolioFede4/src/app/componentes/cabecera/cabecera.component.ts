@@ -1,28 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ApiService } from '../../servicios/api/api.service';
-import { LoginI } from '../../modelos/login.interface';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cabecera',
   templateUrl: './cabecera.component.html',
   styleUrls: ['./cabecera.component.css'],
 })
-export class CabeceraComponent implements OnInit {
-    loginForm = new FormGroup({
-    usuario: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required),
-
-  });
-
-  constructor(private api: ApiService
-    ) {}
+export class CabeceraComponent implements OnInit { 
+  constructor() {
+  }
 
   ngOnInit(): void {}
-
-  onLogin(form: LoginI) {
-    console.log(form);
-  }
 }
