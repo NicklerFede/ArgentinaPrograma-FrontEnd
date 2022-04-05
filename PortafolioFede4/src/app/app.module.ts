@@ -51,7 +51,8 @@ import { SkillsUsuarioComponent } from './componentes/skills-usuario/skills-usua
     AppRoutingModule,
     ReactiveFormsModule, 
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
